@@ -1,9 +1,11 @@
 import React from "react";
 
-function CocktailList() {
+function CategoryFilter() {
   
 
   return(
+ <div>  
+  <label> SELECT CATEGORY </label>
     <select
     name="filter"
     value={category}
@@ -23,7 +25,8 @@ function CocktailList() {
     <option value="Soft Drink / Soda">Soft Drink / Soda</option>
   
   </select>
+  </div>
   )
 }
 
-export default CocktailList;
+export default CategoryFilter;
