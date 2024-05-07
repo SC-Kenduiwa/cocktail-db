@@ -2,9 +2,22 @@ import React, { useState } from "react";
 
 function CategoryFilter() {
   const [chosenCategory, setChosenCategory] =useState([]);
+  const [cocktails, setCocktails] = useState([]);
+
+  useEffect(() => {
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+      .then(res => res.json())
+      .then(data => {setCocktails(data.drinks);
+      })
+      .catch(error => console.log(`Error fetching data:${error}`));
+  }, []);
+
+ console.log(cocktails);
 
   function onCategoryChange (category){
+  setChosenCategory(category)
   }
+
 
   return(
  <div>  
