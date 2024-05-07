@@ -20,8 +20,10 @@ function CategoryFilter() {
 
 const filteredList = cocktails.filter((cocktail) => {
   if(cocktail.strCategory === "All") return true;
-  
-})
+return cocktail.strCategory === chosenCategory
+});
+
+
   return(
  <div>  
   <label> SELECT CATEGORY </label>
@@ -44,6 +46,8 @@ const filteredList = cocktails.filter((cocktail) => {
     <option value="Soft Drink / Soda">Soft Drink / Soda</option>
   
   </select>
+
+ 
   </div>
   )
 }
