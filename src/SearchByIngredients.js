@@ -16,12 +16,10 @@ import React, { useState } from "react";
             const response = await axios.get(
               `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredients}`
             );
-            setSearchResults(response.data.drinks || []); 
+            setSearchResults(response.data.drinks || []); // Updating the 'searchResults' state with the fetched data
           } catch (error) { 
             console.error("Error fetching data:", error); 
           }
-
-
     }
 
 export default SearchByIngredients;
