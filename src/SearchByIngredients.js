@@ -20,6 +20,21 @@ import React, { useState } from "react";
           } catch (error) { 
             console.error("Error fetching data:", error); 
           }
-    }
+    };
+
+    return (
+        <div>
+
+            <h1> Search Cocktails by Ingredients</h1>
+            <form onsubmit={handleSubmit}>
+                <input 
+                type="text"
+                placeholder="Enter ingredients se[arated by commas..."
+                value={ingredients} 
+                onChange={handleInputChange}
+                />
+            </form>
+        </div>
+    )
 
 export default SearchByIngredients;
