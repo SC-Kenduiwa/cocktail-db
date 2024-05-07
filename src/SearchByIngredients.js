@@ -32,9 +32,20 @@ import React, { useState } from "react";
                 placeholder="Enter ingredients se[arated by commas..."
                 value={ingredients} 
                 onChange={handleInputChange}
+
                 />
+                <button type="submit">Search</button>
             </form>
+
+            <h2>Search Results</h2>
+
+            <ul>
+        {searchResults.map((cocktail) => ( 
+          <li key={cocktail.idDrink}>{cocktail.strDrink}</li> 
+        ))}
+      </ul>
+
         </div>
-    )
+    );
 
 export default SearchByIngredients;
