@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 function CategoryFilter() {
-  
+  const [chosenCategory, setChosenCategory] =useState([]);
+
+  function onCategoryChange (category){
+  }
 
   return(
  <div>  
