@@ -1,30 +1,37 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 
 function CategoryFilter() {
-  const [chosenCategory, setChosenCategory] =useState([]);
+  const [chosenCategory, setChosenCategory] =useState("All");
   const [cocktails, setCocktails] = useState([]);
   const [list,setList] = useState([]);
 
   useEffect(() => {
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
       .then(res => res.json())
       .then(data => {setCocktails(data.drinks);
       })
       .catch(error => console.log(`Error fetching data:${error}`));
   }, []);
 
- console.log(cocktails);
+  useEffect(() => {
+    const filteredList = cocktails.filter(cocktail => {
+      if (chosenCategory === "All") return true;
+      return cocktail.strCategory === chosenCategory;
+    });
+    setList(filteredList);
+  }, [chosenCategory, cocktails]);
 
-  function onCategoryChange (category){
-  setChosenCategory(category)
-  }
+const display = list.map(cocktail => (
+  <div key={cocktail.idDrink}>
+    <h3>{cocktail.strDrink}</h3>
+    <p>Category:{cocktail.strCategory}</p>
+    <p>Alcohol-content: {cocktail.strAlcoholic}</p>
+    <p>Glass: {cocktail.strGlass}</p>
+    <p>Instructions: {cocktail.strInstructions}</p>
+    <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ maxWidth: '200px' }}/>
+    </div>
 
-const filteredList = cocktails.filter((cocktail) => {
-  if(cocktail.strCategory === "All") return true;
-return cocktail.strCategory === chosenCategory
-});
-
-setList(filteredList);
+))
 
 
 
@@ -33,25 +40,20 @@ setList(filteredList);
   <label> SELECT CATEGORY </label>
     <select
     name="filter"
-    value={category}
-    onChange={(e) => onCategoryChange(e.target.value)}
+    value={chosenCategory}
+    onChange={(e) => setChosenCategory(e.target.value)}
   >
     <option value="All">Filter by category</option>
     <option value="Ordinary Drink">Ordinary Drink</option>
     <option value="Cocktail">Cocktail</option>
-    <option value="Milk / Float / Shake">Milk / Float / Shake</option>
-    <option value="Other/Unknown">Other/Unknown</option>
-    <option value="Cocoa">Cocoa</option>
     <option value="Shot">Shot</option>
     <option value="Coffee / Tea">Coffee / Tea</option>
-    <option value="Homemade Liqueur">Homemade Liqueur</option>
     <option value="Punch / Party Drink">Punch / Party Drink</option>
     <option value="Beer">Beer</option>
-    <option value="Soft Drink / Soda">Soft Drink / Soda</option>
-  
+    
   </select>
 
- 
+ {display}
   </div>
   )
 }
