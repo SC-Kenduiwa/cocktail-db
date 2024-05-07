@@ -33,20 +33,29 @@ const SearchByIngredients = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Enter ingredients separated by commas..."
+          placeholder="Enter ingredients"
           value={ingredients}
           onChange={handleInputChange}
         />
         <button type="submit">Search</button>
       </form>
       <h2>Search Results</h2>
-      <ul>
+      <div className="cocktail-list">
         {searchResults.map((cocktail) => (
-          <li key={cocktail.idDrink}>{cocktail.strDrink}</li>
+          <div key={cocktail.idDrink} className="cocktail-item">
+            <img
+              src={cocktail.strDrinkThumb}
+              alt={cocktail.strDrink}
+              className="cocktail-img"
+            />
+            <p>{cocktail.strDrink}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
+
+     
 
 export default SearchByIngredients;
