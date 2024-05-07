@@ -12,6 +12,15 @@ import React, { useState } from "react";
 
     const handleSubmit = async (event) =>{
         event.preventDefault();
+        try {
+            const response = await axios.get(
+              `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredients}`
+            );
+            setSearchResults(response.data.drinks || []); 
+          } catch (error) { 
+            console.error("Error fetching data:", error); 
+          }
+
 
     }
 
