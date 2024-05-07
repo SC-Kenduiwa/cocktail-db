@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function CategoryFilter() {
   const [chosenCategory, setChosenCategory] =useState([]);
   const [cocktails, setCocktails] = useState([]);
+  const [list,setList] = useState([]);
 
   useEffect(() => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
@@ -22,6 +23,9 @@ const filteredList = cocktails.filter((cocktail) => {
   if(cocktail.strCategory === "All") return true;
 return cocktail.strCategory === chosenCategory
 });
+
+setList(filteredList);
+
 
 
   return(
