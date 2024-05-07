@@ -18,7 +18,10 @@ function CategoryFilter() {
   setChosenCategory(category)
   }
 
-
+const filteredList = cocktails.filter((cocktail) => {
+  if(cocktail.strCategory === "All") return true;
+  
+})
   return(
  <div>  
   <label> SELECT CATEGORY </label>
