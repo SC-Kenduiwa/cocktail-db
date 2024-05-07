@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function SearchByIngredients=() => {
+    const SearchByIngredients = () => { 
     const[ ingredients, setIngredients]=useState("");
     const [searchResults, setSearchResults]= useState([]);
 }
@@ -8,6 +8,11 @@ function SearchByIngredients=() => {
 
     const handleInputCange = (event) => {
         setIngredients(event.target.value)
+    }
+
+    const handleSubmit = async (event) =>{
+        event.preventDefault();
+
     }
 
 export default SearchByIngredients;
