@@ -1,8 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import FilterAlcohol from './FilterAlcohol';
-import Home from './Home';
-import SearchByIngredients from './SearchByIngredients'; // Import the SearchByIngredients component
 import FilterAlcohol from './FilterAlcohol'; 
 import Home from './Home'; 
 import CategoryFilter from './Filter';
@@ -17,20 +14,20 @@ function App() {
             <li style={{ display: 'inline-block', marginRight: '20px' }}>
               <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
             </li>
-            <li style={{ display: 'inline-block', marginRight: '20px' }}>
-              <Link to="/FilterAlcohol" style={{ textDecoration: 'none', color: 'black' }}>Filter Alcohol</Link>
-            </li>
-            {/* Add a space between the navigation links */}
             <li style={{ display: 'inline-block' }}>
-              <Link to="/SearchByIngredients" style={{ textDecoration: 'none', color: 'black' }}>Search By Ingredients</Link>
+              <Link to="/FilterAlcohol" style={{ textDecoration: 'none', color: 'black', marginRight:"20px" }}>Filter Alcohol  </Link>
             </li>
+            <li style={{ display: 'inline-block' }}>
+              <Link to="/CategoryFilter" style={{ textDecoration: 'none', color: 'black', marginRight: "20px" }}>Explore by Category</Link>
+            </li>
+            
           </ul>
         </nav>
         <header className="App-header">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/FilterAlcohol" element={<FilterAlcohol />} />
-            <Route path="/SearchByIngredients" element={<SearchByIngredients />} />
+            <Route path="/CategoryFilter" element={<CategoryFilter/>} />
           </Routes>
         </header>
       </div>
