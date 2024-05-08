@@ -35,7 +35,7 @@ const SearchByIngredients = () => {
 
   return (
     <div>
-      <h1 style={{ fontSize: "30px" }}>Search Cocktails by Ingredients</h1>
+      <h1 style={{ fontSize: "24px" }}>Search Cocktails by Ingredients</h1>
       <form onSubmit={handleSearch}>
         {/* Form for entering ingredients and triggering search */}
         <input
@@ -46,17 +46,14 @@ const SearchByIngredients = () => {
         />
         <button type="submit">Search</button> 
       </form>
-      <h2>Search Results</h2>
-      <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap" }}> {/* Display search results */}
+      <h2 style={{ fontSize: "20px" }}>Search Results</h2>
+      {/* Display search results */}
+      <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap" }}>
         {searchResults.map((cocktail) => (
           <div key={cocktail.idDrink} className="cocktail-item" style={{ marginRight: "20px", marginBottom: "20px" }}>
             <img
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
-              className="cocktail-img"
-              style={{ width: "300px", height: "auto" }} // Inline styling for image size
-      
-
               style={{ width: "200px", height: "auto" }}
             />
             <p>{cocktail.strDrink}</p>
