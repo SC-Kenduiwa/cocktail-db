@@ -1,0 +1,48 @@
+.container {
+  max-width: 800px;
+  max-height: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+}
+
+.paragraph {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.inner-div {
+  margin-top: 20px;
+}
+
+.inner-inner-div {
+  margin-bottom: 20px;
+}
+
+.h2-letter {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.un-ordered {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list {
+  margin-bottom: 5px;
+}
+
+.list:hover {
+  cursor: pointer;
+  color: #d10c0c;
+  text-decoration: underline;
+}
+
+.title{
+  color: rgb(0, 81, 255);
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
