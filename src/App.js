@@ -24,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/FilterAlcohol" element={<FilterAlcohol />} />
+            <Route path="/SearchByIngredients" element={<SearchByIngredients />}
           </Routes>
         </header>
       </div>
