@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilterAlcohol from './FilterAlcohol'; 
 import Home from './Home'; 
 import CategoryFilter from './Filter';
+import "./Home.css";
 import SearchByIngredients from './SearchByIngredients'
 
 // App component
@@ -10,15 +11,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav style={{ textAlign: 'center', margin: '20px 0' }}>
+        <nav style={{ textAlign: 'center', margin: '20px 0' }} >
           <ul style={{ listStyleType: 'none', padding: 0 }}>
-            <li style={{ display: 'inline-block', marginRight: '20px' }}>
+            <li style={{ display: 'inline-block', marginRight: '20px' }} className="navlinks">
               <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
             </li>
-            <li style={{ display: 'inline-block' }}>
+            <li style={{ display: 'inline-block' }} className="navlinks">
               <Link to="/FilterAlcohol" style={{ textDecoration: 'none', color: 'black', marginRight:"20px" }}>Filter Alcohol  </Link>
             </li>
-            <li style={{ display: 'inline-block' }}>
+            <li style={{ display: 'inline-block' }} className="navlinks">
               <Link to="/CategoryFilter" style={{ textDecoration: 'none', color: 'black', marginRight: "20px" }}>Explore by Category</Link>
             </li>
             <li style={{ display: 'inline-block' }}>
