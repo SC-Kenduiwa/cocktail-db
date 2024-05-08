@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilterAlcohol from './FilterAlcohol'; 
 import Home from './Home'; 
+import CategoryFilter from './Filter';
 
 // App component
 function App() {
@@ -14,7 +15,10 @@ function App() {
               <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>Home</Link>
             </li>
             <li style={{ display: 'inline-block' }}>
-              <Link to="/FilterAlcohol" style={{ textDecoration: 'none', color: 'black' }}>Filter Alcohol</Link>
+              <Link to="/FilterAlcohol" style={{ textDecoration: 'none', color: 'black', marginRight:"20px" }}>Filter Alcohol  </Link>
+            </li>
+            <li style={{ display: 'inline-block' }}>
+              <Link to="/CategoryFilter" style={{ textDecoration: 'none', color: 'black', marginRight: "20px" }}>Explore by Category</Link>
             </li>
             
           </ul>
@@ -23,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/FilterAlcohol" element={<FilterAlcohol />} />
+            <Route path="/CategoryFilter" element={<CategoryFilter/>} />
           </Routes>
         </header>
       </div>
