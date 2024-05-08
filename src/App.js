@@ -5,6 +5,7 @@ import './App.css';
 import React from "react";
 import CategoryFilter from "./Filter"
 import ListCocktails from './ListCocktails';
+import SearchByName from './SearchByName';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <SearchByIngredients/>
           <CategoryFilter/>
           <ListCocktails/>
+          <SearchByName/>
       </main>
     </div>
   );
