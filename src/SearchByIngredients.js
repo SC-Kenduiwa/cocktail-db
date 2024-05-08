@@ -1,27 +1,23 @@
-import React, { useState } from "react"; // Import React and useState hook
-import axios from "axios"; // Import axios for making HTTP requests
+import React, { useState } from "react";
+import axios from "axios"; 
 
 const SearchByIngredients = () => { // Define SearchByIngredients component
-  const [ingredients, setIngredients] = useState(""); // State for storing user input of ingredients
-  const [searchResults, setSearchResults] = useState([]); // State for storing search results
+  const [ingredients, setIngredients] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   // Function to fetch cocktails based on ingredients
   const fetchCocktails = async () => {
     try {
       // Check if ingredients input is not empty
       if (ingredients.trim() !== "") {
-        // Fetch cocktails data from API based on ingredients
         const response = await axios.get(
           `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredients}`
         );
-        // Update searchResults state with fetched cocktails
         setSearchResults(response.data.drinks || []);
       } else {
-        // If ingredients input is empty, clear searchResults
         setSearchResults([]);
       }
     } catch (error) {
-      // Log error if fetching data fails
       console.error("Error fetching data:", error);
     }
   };
@@ -34,7 +30,7 @@ const SearchByIngredients = () => { // Define SearchByIngredients component
 
   // Function to handle search button click event
   const handleSearch = async (event) => {
-    event.preventDefault(); // Prevent the default form submission behavior
+    event.preventDefault();
     fetchCocktails(); // Call fetchCocktails when the search button is clicked
   };
 
@@ -47,9 +43,9 @@ const SearchByIngredients = () => { // Define SearchByIngredients component
           type="text"
           placeholder="Enter ingredients"
           value={ingredients}
-          onChange={handleInputChange} // Handle input change event
+          onChange={handleInputChange}
         />
-        <button type="submit">Search</button> {/* Button to trigger search */}
+        <button type="submit">Search</button> 
       </form>
       <h2>Search Results</h2>
       <div className="cocktail-list"> {/* Display search results */}
@@ -68,4 +64,4 @@ const SearchByIngredients = () => { // Define SearchByIngredients component
   );
 };
 
-export default SearchByIngredients; // Export SearchByIngredients component
+export default SearchByIngredients;
