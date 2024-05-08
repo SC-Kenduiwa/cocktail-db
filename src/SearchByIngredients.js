@@ -8,7 +8,6 @@ const SearchByIngredients = () => { // Define SearchByIngredients component
   // Function to fetch cocktails based on ingredients
   const fetchCocktails = async () => {
     try {
-      // Check if ingredients input is not empty
       if (ingredients.trim() !== "") {
         const response = await axios.get(
           `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredients}`
