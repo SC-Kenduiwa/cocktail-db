@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios"; 
 
 const SearchByIngredients = () => {
   const [ingredients, setIngredients] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [displayedCocktails, setDisplayedCocktails] = useState([]);
 
   // Function to fetch cocktails based on ingredients
   const fetchCocktails = async () => {
@@ -20,6 +21,26 @@ const SearchByIngredients = () => {
       console.error("Error fetching data:", error);
     }
   };
+
+  // Function to load cocktails with water as an ingredient when component mounts
+  useEffect(() => {
+    const loadDefaultCocktails = async () => {
+      try {
+        const response = await axios.get(
+          `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=gin`
+        );
+        setSearchResults(response.data.drinks || []);
+      } catch (error) {
+        console.error("Error fetching default cocktails:", error);
+      }
+    };
+    loadDefaultCocktails();
+  }, []); // Empty dependency array ensures this effect runs only once on component mount
+
+  // Update displayed cocktails when search results change or when the component mounts
+  useEffect(() => {
+    setDisplayedCocktails(searchResults.slice(0, 20)); // Display the first 20 cocktails
+  }, [searchResults]);
 
   // Function to handle input change event
   const handleInputChange = (event) => {
@@ -50,7 +71,7 @@ const SearchByIngredients = () => {
       <h2 style={{ fontFamily: "Times New Roman", fontSize: "25px", marginTop: "20px", marginBottom: "10px" }}>Search Results</h2>
       {/* Display search results */}
       <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-        {searchResults.map((cocktail) => (
+        {displayedCocktails.map((cocktail) => (
           <div key={cocktail.idDrink} className="cocktail-item" style={{ marginRight: "20px", marginBottom: "20px" }}>
             <img
               src={cocktail.strDrinkThumb}
