@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryFilter from "./components/Filter"
+import CategoryFilter from "./Filter"
 
 function App() {
   return (
