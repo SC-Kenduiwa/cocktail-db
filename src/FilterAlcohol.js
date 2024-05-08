@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './ListCocktails.css'
 
 const FilterAlcohol = () => {
   // State variables
