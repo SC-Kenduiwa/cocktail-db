@@ -4,6 +4,7 @@ import FilterAlcohol from './FilterAlcohol'
 import './App.css';
 import React from "react";
 import CategoryFilter from "./Filter"
+import ListCocktails from './ListCocktails';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <FilterAlcohol />
         <SearchByIngredients/>
           <CategoryFilter/>
+          <ListCocktails/>
       </main>
     </div>
   );
