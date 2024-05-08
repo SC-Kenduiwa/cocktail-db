@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchByIngredients from './SearchByIngredients';
-import CocktailFilter from './CocktailFilter'; 
+import FilterAlcohol from './FilterAlcohol'; 
 
 function App() {
   return (
@@ -9,8 +9,9 @@ function App() {
         <h1>Welcome to the Cocktail Database</h1>
       </header>
       <main>
-        <CocktailFilter />
+        <FilterAlcohol />
       </main>
     </div>
   );
 }
+export default App;

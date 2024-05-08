@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const CocktailFilter = () => {
+const FilterAlcohol = () => {
   const [drinks, setDrinks] = useState([]);
   const [filter, setFilter] = useState('Alcoholic');
 
@@ -55,4 +55,4 @@ const CocktailFilter = () => {
   );
 };
 
-export default CocktailFilter;
+export default FilterAlcohol;
