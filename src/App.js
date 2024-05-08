@@ -1,31 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-import SearchByIngredients from './SearchByIngredients';
-import FilterAlcohol from './FilterAlcohol'
-import './App.css';
-import CategoryFilter from "./Filter"
-import ListCocktails from './ListCocktails';
-=======
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilterAlcohol from './FilterAlcohol'; 
 import Home from './Home'; 
->>>>>>> 4debb044ab33106269ce5afb47055cc5143a8c73
 
 // App component
 function App() {
   return (
-<<<<<<< HEAD
-    <div className="App">
-      <main>
-        <FilterAlcohol />
-        <SearchByIngredients/>
-          <CategoryFilter/>
-          <ListCocktails/>
-      </main>
-    </div>
-  );
-}
-=======
     <Router>
       <div className="App">
         <nav style={{ textAlign: 'center', margin: '20px 0' }}>
@@ -50,5 +30,4 @@ function App() {
   );
 }
 
->>>>>>> 4debb044ab33106269ce5afb47055cc5143a8c73
 export default App;
