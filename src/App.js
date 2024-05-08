@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilterAlcohol from './FilterAlcohol'; 
 import Home from './Home'; 
 import CategoryFilter from './Filter';
+import SearchByIngredients from './SearchByIngredients'
 
 // App component
 function App() {
@@ -20,6 +21,9 @@ function App() {
             <li style={{ display: 'inline-block' }}>
               <Link to="/CategoryFilter" style={{ textDecoration: 'none', color: 'black', marginRight: "20px" }}>Explore by Category</Link>
             </li>
+            <li style={{ display: 'inline-block' }}>
+              <Link to="/SearchByIngredients" style={{ textDecoration: 'none', color: 'black' }}>Search By Ingredients</Link>
+            </li>
             
           </ul>
         </nav>
@@ -28,6 +32,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/FilterAlcohol" element={<FilterAlcohol />} />
             <Route path="/CategoryFilter" element={<CategoryFilter/>} />
+            <Route path="/SearchByIngredients" element={<SearchByIngredients />} />
           </Routes>
         </header>
       </div>
