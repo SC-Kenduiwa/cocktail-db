@@ -23,10 +23,7 @@ function CategoryFilter() {
   }, [chosenCategory, cocktails]);
 
 const display = list.map(cocktail => (
-  <div 
-  key={cocktail.idDrink}
-  className="displayList"
-  >
+  <div key={cocktail.idDrink} className="displayList">
     <main className="text-content">
     <h3 className="name">{cocktail.strDrink}</h3>
     <p className="cocktail-info"><strong>Category:</strong>{cocktail.strCategory}</p>
