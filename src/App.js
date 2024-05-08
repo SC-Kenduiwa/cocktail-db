@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilterAlcohol from './FilterAlcohol';
 import Home from './Home';
 import SearchByIngredients from './SearchByIngredients'; // Import the SearchByIngredients component
+import FilterAlcohol from './FilterAlcohol'; 
+import Home from './Home'; 
+import CategoryFilter from './Filter';
 
 // App component
 function App() {
