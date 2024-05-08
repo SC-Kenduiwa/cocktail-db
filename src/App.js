@@ -1,17 +1,14 @@
-import './App.css';
 import React from 'react';
 import SearchByIngredients from './SearchByIngredients';
-
+import FilterAlcohol from './FilterAlcohol'
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <SearchByIngredients />
-      <header className="App-header">
-        <h1>Welcome to the Cocktail Database</h1>
-      </header>
       <main>
-        <CocktailFilter />
+        <FilterAlcohol />
+        <SearchByIngredients/>
       </main>
     </div>
   );
