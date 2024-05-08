@@ -1,4 +1,5 @@
 import React, { useState , useEffect} from "react";
+import "./Filter.css"
 
 function CategoryFilter() {
   const [chosenCategory, setChosenCategory] =useState("All");
@@ -22,13 +23,18 @@ function CategoryFilter() {
   }, [chosenCategory, cocktails]);
 
 const display = list.map(cocktail => (
-  <div key={cocktail.idDrink}>
-    <h3>{cocktail.strDrink}</h3>
-    <p>Category:{cocktail.strCategory}</p>
-    <p>Alcohol-content: {cocktail.strAlcoholic}</p>
-    <p>Glass: {cocktail.strGlass}</p>
-    <p>Instructions: {cocktail.strInstructions}</p>
-    <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} style={{ maxWidth: '200px' }}/>
+  <div 
+  key={cocktail.idDrink}
+  className="displayList"
+  >
+    <main className="text-content">
+    <h3 className="name">{cocktail.strDrink}</h3>
+    <p className="cocktail-info"><strong>Category:</strong>{cocktail.strCategory}</p>
+    <p className="cocktail-info"><strong>Alcohol-content:</strong> {cocktail.strAlcoholic}</p>
+    <p className="cocktail-info"><strong>Glass:</strong> {cocktail.strGlass}</p>
+    <p className="cocktail-info"><strong>Instructions: </strong>{cocktail.strInstructions}</p>
+    </main>
+    <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink}/>
     </div>
 
 ))
@@ -37,11 +43,13 @@ const display = list.map(cocktail => (
 
   return(
  <div>  
-  <label> SELECT CATEGORY </label>
+  <label className="label"> 
+  SELECT CATEGORY: </label>
     <select
     name="filter"
     value={chosenCategory}
     onChange={(e) => setChosenCategory(e.target.value)}
+    className="dropdown"
   >
     <option value="All">Filter by category</option>
     <option value="Ordinary Drink">Ordinary Drink</option>
@@ -52,7 +60,6 @@ const display = list.map(cocktail => (
     <option value="Beer">Beer</option>
     
   </select>
-
  {display}
   </div>
   )

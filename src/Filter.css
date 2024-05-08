@@ -1,0 +1,55 @@
+body {
+    background-image: url("https://i.pinimg.com/236x/f9/c1/1c/f9c11c0baeab175d03b0af1a03e9caca.jpg");
+    background-size: cover; 
+    background-position: center; 
+  }
+  
+ .label{
+    font-weight: bold;
+    color : lightslategrey;
+    font-size: 25px;
+    margin-bottom: 30px;
+ }
+
+ .cocktail-info{
+    color:white;
+    font-style: italic;
+  
+ }
+
+.name{
+    color:darkgray
+}
+
+.dropdown{
+margin-bottom: 25px;
+margin-top: 15px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+padding: 13px;
+color: white;
+background-color: grey;
+font-size: 15px;
+border-radius: 40%
+}
+
+.text-content {
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  }
+.displayList img {
+    border-radius: 10%;
+    width: 15%;
+    height: auto;
+    text-wrap:balance;
+  }
+  .displayList {
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px; 
+  }
+  
