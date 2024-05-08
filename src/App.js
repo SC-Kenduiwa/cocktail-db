@@ -3,14 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilterAlcohol from './FilterAlcohol'; 
 import Home from './Home'; 
 import CategoryFilter from './Filter';
-import SearchByIngredients from './SearchByIngredients'
 import SearchByIngredients from './SearchByIngredients';
-import FilterAlcohol from './FilterAlcohol'
-import './App.css';
-import CategoryFilter from "./Filter"
-import ListCocktails from './ListCocktails';
 import SearchByName from './SearchByName';
 
+// App component
 function App() {
   return (
     <Router>
@@ -27,10 +23,10 @@ function App() {
               <Link to="/CategoryFilter" style={{ textDecoration: 'none', color: 'black', marginRight: "20px" }}>Explore by Category</Link>
             </li>
             <li style={{ display: 'inline-block' }}>
-              <Link to="/SearchByIngredients" style={{ textDecoration: 'none', color: 'black' }}>Search By Ingredients</Link>
+              <Link to="/SearchByIngredients" style={{ textDecoration: 'none', color: 'black', marginRight: "20px" }}>Search By Ingredients</Link>
             </li>
             <li style={{ display: 'inline-block' }}>
-              <Link to="/SearchByName" style={{ textDecoration: 'none', color: 'black', marginRight: "20px" }}>Explore by Category</Link>
+              <Link to="/SearchByName" style={{ textDecoration: 'none', color: 'black' }}>Search By Name</Link>
             </li>
           </ul>
         </nav>
@@ -40,20 +36,11 @@ function App() {
             <Route path="/FilterAlcohol" element={<FilterAlcohol />} />
             <Route path="/CategoryFilter" element={<CategoryFilter/>} />
             <Route path="/SearchByIngredients" element={<SearchByIngredients />} />
-            <Route path="/SearchByName" element={<SearchByIngredients />} />
+            <Route path="/SearchByName" element={<SearchByName />} />
           </Routes>
         </header>
       </div>
     </Router>
-    <div className="App">
-      <main> 
-        <FilterAlcohol/>
-        <SearchByIngredients/>
-          <CategoryFilter/>
-          <ListCocktails/>
-          <SearchByName/>
-      </main>
-    </div>
   );
 }
 
