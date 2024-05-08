@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios"; 
 
-const SearchByIngredients = () => { // Define SearchByIngredients component
+const SearchByIngredients = () => {
   const [ingredients, setIngredients] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
@@ -33,11 +33,11 @@ const SearchByIngredients = () => { // Define SearchByIngredients component
     fetchCocktails(); // Call fetchCocktails when the search button is clicked
   };
 
-  // Render component UI
   return (
     <div>
-      <h1>Search Cocktails by Ingredients</h1>
-      <form onSubmit={handleSearch}> {/* Form for entering ingredients and triggering search */}
+      <h1 style={{ fontSize: "30px" }}>Search Cocktails by Ingredients</h1>
+      <form onSubmit={handleSearch}>
+        {/* Form for entering ingredients and triggering search */}
         <input
           type="text"
           placeholder="Enter ingredients"
@@ -49,7 +49,7 @@ const SearchByIngredients = () => { // Define SearchByIngredients component
       <h2>Search Results</h2>
       <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap" }}> {/* Display search results */}
         {searchResults.map((cocktail) => (
-          <div key={cocktail.idDrink} className="cocktail-item">
+          <div key={cocktail.idDrink} className="cocktail-item" style={{ marginRight: "20px", marginBottom: "20px" }}>
             <img
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
@@ -57,6 +57,7 @@ const SearchByIngredients = () => { // Define SearchByIngredients component
               style={{ width: "300px", height: "auto" }} // Inline styling for image size
       
 
+              style={{ width: "200px", height: "auto" }}
             />
             <p>{cocktail.strDrink}</p>
           </div>
