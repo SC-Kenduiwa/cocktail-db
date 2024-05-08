@@ -47,13 +47,16 @@ const SearchByIngredients = () => { // Define SearchByIngredients component
         <button type="submit">Search</button> 
       </form>
       <h2>Search Results</h2>
-      <div className="cocktail-list"> {/* Display search results */}
+      <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap" }}> {/* Display search results */}
         {searchResults.map((cocktail) => (
           <div key={cocktail.idDrink} className="cocktail-item">
             <img
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
               className="cocktail-img"
+              style={{ width: "300px", height: "auto" }} // Inline styling for image size
+      
+
             />
             <p>{cocktail.strDrink}</p>
           </div>
