@@ -68,7 +68,7 @@ const SearchByIngredients = () => {
         />
         <button type="submit">Search</button> 
       </form>
-      <h2 style={{ fontFamily: "Times New Roman", fontSize: "25px", marginTop: "20px", marginBottom: "10px" }}>Search Results</h2>
+      <h2></h2>
       {/* Display search results */}
       <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {displayedCocktails.map((cocktail) => (
