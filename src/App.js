@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import FilterAlcohol from './FilterAlcohol'; 
 import Home from './Home'; 
+import SearchByIngredients from './SearchByIngredients'; 
 
 // App component
 function App() {
