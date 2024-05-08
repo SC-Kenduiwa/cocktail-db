@@ -48,9 +48,9 @@ const SearchByName = () => {
         <button type="submit">Search</button>
       </form>
       <h2 style={{ fontFamily: "Times New Roman", fontSize: "25px", marginTop: "20px", marginBottom: "10px" }}>Search Results</h2>
-      <div className="cocktail-list" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {searchResults.map((cocktail) => (
-          <div key={cocktail.idDrink} className="cocktail-item" style={{ marginBottom: "20px" }}>
+          <div key={cocktail.idDrink} className="cocktail-item" style={{ marginRight: "20px", marginBottom: "20px" }}>
             <img
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
