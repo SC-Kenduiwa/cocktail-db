@@ -1,5 +1,4 @@
 # Group 1 Phase2 Project(Cocktail-DB App)
-# Group 1 Phase2 Project(Cocktail-DB App)
 
 ## Date, 2024/05/08
 
@@ -35,37 +34,35 @@ A user is also able to check the category of the cocktails and whether it is alc
 -useState-Manages state within dunctional components.
 -useEffect allows data fetching from API.
 -Components-are reusable pieces of code to perform specific functions.
+
 ## Technologies used
-HTML:Markup language for structuring the web page.
-CSS:Provides styling and responsiveness to the web page layout.
-Github-Allows making of changes to the app by the group members.
-React-used to build the yser interface
+
+-HTML:Markup language for structuring the web page.
+-CSS:Provides styling and responsiveness to the web page layout.
+-Github-Allows making of changes to the app by the group members.
+-React-used to build the yser interface
 
 ## Installation
 
 use git clone to be able to download the documents in Github.
 
 ## Installation Requirements
+
 Git
 
 ## Installation Instruction
+
 Git clone git@github.com:SC-Kenduiwa/cocktail-db.git
 
-##Live Link
-
-
-## Technologies used
-HTML
-CSS
-Github
-React
-JavaScript
 ## Expected challenges
 
 -Making the different api’s  talk to each other .
 -Making the search to work 
 -To render information to the front end 
 
+## Licence
+
+This project is licenced under the MIT licence
 
 # Getting Started with Create React App
 
