@@ -62,7 +62,11 @@ Git clone git@github.com:SC-Kenduiwa/cocktail-db.git
 
 ## Licence
 
-This project is licenced under the MIT licence
+This project is licenced under the MIT licence.
+
+## Deployment link
+
+https://sc-kenduiwa.github.io/cocktail-db/
 
 # Getting Started with Create React App
 
