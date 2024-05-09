@@ -1,4 +1,5 @@
 # Group 1 Phase2 Project(Cocktail-DB App)
+# Group 1 Phase2 Project(Cocktail-DB App)
 
 ## Date, 2024/05/08
 
@@ -8,13 +9,42 @@
 *Brenda Cheptoo
 *Favor Vincent
 *Lorraine Opiyo
+-Shanice Kenduiwa-FilterAlcohol.js
+-Abdihafith Ali-ListCocktails.js
+-Brenda Cheptoo-SearchByIngredients.js
+-Favor Vincent-Filter.js
+-Lorraine Opiyo-SearchByName.js
 
 ## Description
 This project is about creating a react app with a list of cocktails.The cocktails are listed alphabetically. This is done in ListCocktails component.
 
 A user is able to search for the cocktail that they need either by the cocktail name or by the cocktail ingredients.The components responsible for this are SearchByName and SearchByIngredients components.
 
-A user is also able to check the category of the cocktails and whether it is alcoholic or non-alcoholic. This is done by Filter and FilterAlcohol components respectively.
+A user is also able to check the category of the cocktails and whether it is alcoholic or non-alcoholic. This is done by Filter and FilterAlcohol components respectively. 
+
+
+## features
+-Search Functionality:** Users can input search for cocktails by ingredients and cocktail name.
+-Filtering Options:** Users can filter brewery based on category and alcoholic or non alcoholic.
+-Listing of Cocktails alphabetically.
+-Error Handling.
+
+## Usage
+
+-The user will be able to view the cocktails on the browser.
+-The user will be able to search for cocktails either by name or the ingredients of the cocktails. 
+-The user will be able to filter cocktails by category and whether it is alcoholic or non-alcoholic
+
+## React Functionality
+
+-useState-Manages state within dunctional components.
+-useEffect allows data fetching from API.
+-Components-are reusable pieces of code to perform specific functions.
+## Technologies used
+HTML:Markup language for structuring the web page.
+CSS:Provides styling and responsiveness to the web page layout.
+Github-Allows making of changes to the app by the group members.
+React-used to build the yser interface
 
 ## Installation
 
@@ -35,6 +65,12 @@ CSS
 Github
 React
 JavaScript
+## Expected challenges
+
+-Making the different api’s  talk to each other .
+-Making the search to work 
+-To render information to the front end 
+
 
 # Getting Started with Create React App
 
