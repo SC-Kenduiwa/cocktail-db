@@ -13,8 +13,19 @@
   }
 }
 
+h1 {
+  color: brown;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
+}
+h2 {
+  color: rgb(57, 30, 153);
+  font-family: 'Times New Roman', Times, serif;
+  font-size:large;
+}
+
+
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
