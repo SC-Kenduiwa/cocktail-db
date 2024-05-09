@@ -1,8 +1,14 @@
 # Group 1 Phase2 Project(Cocktail-DB App)
+# Group 1 Phase2 Project(Cocktail-DB App)
 
 ## Date, 2024/05/08
 
 ### Group Members
+*Shanice Kenduiwa
+*Abdihafith Ali
+*Brenda Cheptoo
+*Favor Vincent
+*Lorraine Opiyo
 -Shanice Kenduiwa-FilterAlcohol.js
 -Abdihafith Ali-ListCocktails.js
 -Brenda Cheptoo-SearchByIngredients.js
@@ -50,6 +56,15 @@ Git
 ## Installation Instruction
 Git clone git@github.com:SC-Kenduiwa/cocktail-db.git
 
+##Live Link
+
+
+## Technologies used
+HTML
+CSS
+Github
+React
+JavaScript
 ## Expected challenges
 
 -Making the different api’s  talk to each other .
