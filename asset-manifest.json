@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cocktail-db/static/css/main.9394cd75.css",
+    "main.js": "/cocktail-db/static/js/main.fc2f4c20.js",
+    "static/js/453.4f1529ec.chunk.js": "/cocktail-db/static/js/453.4f1529ec.chunk.js",
+    "index.html": "/cocktail-db/index.html",
+    "main.9394cd75.css.map": "/cocktail-db/static/css/main.9394cd75.css.map",
+    "main.fc2f4c20.js.map": "/cocktail-db/static/js/main.fc2f4c20.js.map",
+    "453.4f1529ec.chunk.js.map": "/cocktail-db/static/js/453.4f1529ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9394cd75.css",
+    "static/js/main.fc2f4c20.js"
+  ]
+}
