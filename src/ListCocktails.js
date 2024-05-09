@@ -9,13 +9,15 @@ function ListCocktails() {
     async function fetchCocktails() {
       try {
         const response = await fetch(
-          "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+          "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
         );
         if (!response.ok) {
           throw new Error("Failed to fetch cocktails");
         }
         const data = await response.json();
-        setCocktails(data.drinks || []);
+        // Sort cocktails alphabetically by name
+        const sortedCocktails = data.drinks.sort((a, b) => a.strDrink.localeCompare(b.strDrink));
+        setCocktails(sortedCocktails || []);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching cocktails:", error);
@@ -47,8 +49,10 @@ function ListCocktails() {
               <h2 className="h2-letter">{letter}</h2>
               <ul className="un-ordered">
                 {drinks.map(cocktail => (
-                  <li key={cocktail.idDrink} className="list">{cocktail.strDrink}
-                  <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink}/></li>
+                  <li key={cocktail.idDrink} className="list">
+                    {cocktail.strDrink}
+                    <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+                  </li>
                 ))}
               </ul>
             </div>
