@@ -35,25 +35,26 @@ const SearchByName = () => {
 
   // Render component UI
   return (
-    <div>
-      <h1>Search Cocktails by Name</h1>
+    <div style={{ textAlign: "center", color: "black" }}>
+      <h1 style={{ fontFamily: "Times New Roman", fontSize: "30px", marginBottom: "20px" }}>Search Cocktails by Name</h1>
       <form onSubmit={handleSearch}>
         <input
           type="text"
           placeholder="Enter cocktail name"
           value={cocktailName}
           onChange={handleInputChange}
+          style={{ marginRight: "10px" }}
         />
         <button type="submit">Search</button>
       </form>
-      <h2>Search Results</h2>
-      <div className="cocktail-list">
+      <h2 style={{ fontFamily: "Times New Roman", fontSize: "25px", marginTop: "20px", marginBottom: "10px" }}>Search Results</h2>
+      <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
         {searchResults.map((cocktail) => (
-          <div key={cocktail.idDrink} className="cocktail-item">
+          <div key={cocktail.idDrink} className="cocktail-item" style={{ marginRight: "20px", marginBottom: "20px" }}>
             <img
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
-              className="cocktail-img"
+              style={{ width: "200px", height: "auto" }}
             />
             <p>{cocktail.strDrink}</p>
           </div>
