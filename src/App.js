@@ -16,6 +16,10 @@ function App() {
             <li style={{ display: 'inline-block' }}>
               <Link to="/FilterAlcohol" style={{ textDecoration: 'none', color: 'black' }}>Filter Alcohol</Link>
             </li>
+
+            <li style={{ display: 'inline-block' }} class name="navlinks">
+              <Link to="/ListCocktails" style={{ textDecoration: 'none', color: 'black' }}>List Cocktails</Link>
+            </li>
             
           </ul>
         </nav>
@@ -23,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/FilterAlcohol" element={<FilterAlcohol />} />
+            <Route path="/ListCocktails" element={<ListCocktails />} />
           </Routes>
         </header>
       </div>
