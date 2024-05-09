@@ -39,7 +39,7 @@ const display = list.map(cocktail => (
 
 
   return(
- <div>  
+ <div className="cocktail-container">  
   <label className="label"> 
   SELECT CATEGORY: </label>
     <select

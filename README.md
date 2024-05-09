@@ -1,3 +1,41 @@
+# Group 1 Phase2 Project(Cocktail-DB App)
+
+## Date, 2024/05/08
+
+### Group Members
+*Shanice Kenduiwa
+*Abdihafith Ali
+*Brenda Cheptoo
+*Favor Vincent
+*Lorraine Opiyo
+
+## Description
+This project is about creating a react app with a list of cocktails.The cocktails are listed alphabetically. This is done in ListCocktails component.
+
+A user is able to search for the cocktail that they need either by the cocktail name or by the cocktail ingredients.The components responsible for this are SearchByName and SearchByIngredients components.
+
+A user is also able to check the category of the cocktails and whether it is alcoholic or non-alcoholic. This is done by Filter and FilterAlcohol components respectively.
+
+## Installation
+
+use git clone to be able to download the documents in Github.
+
+## Installation Requirements
+Git
+
+## Installation Instruction
+Git clone git@github.com:SC-Kenduiwa/cocktail-db.git
+
+##Live Link
+
+
+## Technologies used
+HTML
+CSS
+Github
+React
+JavaScript
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
