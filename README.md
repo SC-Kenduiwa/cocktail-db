@@ -22,7 +22,7 @@ A user is also able to check the category of the cocktails and whether it is alc
 -Search Functionality:** Users can input search for cocktails by ingredients and cocktail name.
 -Filtering Options:** Users can filter brewery based on category and alcoholic or non alcoholic.
 -Listing of Cocktails alphabetically.
--Error Handling.
+-Error Handling and debugging.
 
 ## Usage
 
