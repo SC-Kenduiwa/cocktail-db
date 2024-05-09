@@ -42,6 +42,7 @@ function ListCocktails() {
   };
 
   return (
+    <div className="background"> 
     <div className="container">
       <h1 className="title">MY COCKTAIL LIST</h1>
       <div className="filter-bar">
@@ -88,16 +89,19 @@ function ListCocktails() {
               <h2 className="h2-letter">{groupingKey}</h2>
               <ul className="un-ordered">
                 {drinks.map(cocktail => (
-                  <li key={cocktail.idDrink} className="list">
-                    {cocktail.strDrink}
-                    <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-                  </li>
+                   <li key={cocktail.idDrink} className="list">
+                   <div className="cocktail-name">{cocktail.strDrink}</div>
+                   <div className="cocktail-image">
+                     <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+                   </div>
+                 </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
       )}
+    </div>
     </div>
   );
 }
