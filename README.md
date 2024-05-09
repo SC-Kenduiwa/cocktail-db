@@ -4,11 +4,6 @@
 ## Date, 2024/05/08
 
 ### Group Members
-*Shanice Kenduiwa
-*Abdihafith Ali
-*Brenda Cheptoo
-*Favor Vincent
-*Lorraine Opiyo
 -Shanice Kenduiwa-FilterAlcohol.js
 -Abdihafith Ali-ListCocktails.js
 -Brenda Cheptoo-SearchByIngredients.js
