@@ -1,13 +1,13 @@
-# Group 1 Phase2 Project(Cocktail App)
+# Group 1 Phase2 Project(Cocktail-DB App)
 
 ## Date, 2024/05/08
 
 ### Group Members
-*Shanice Kenduiwa-FilterAlcohol.js
-*Abdihafith Ali-ListCocktails.js
-*Brenda Cheptoo-SearchByIngredients.js
-*Favor Vincent-Filter.js
-*Lorraine Opiyo-SearchByName.js
+*Shanice Kenduiwa
+*Abdihafith Ali
+*Brenda Cheptoo
+*Favor Vincent
+*Lorraine Opiyo
 
 ## Description
 This project is about creating a react app with a list of cocktails.The cocktails are listed alphabetically. This is done in ListCocktails component.
@@ -34,6 +34,7 @@ HTML
 CSS
 Github
 React
+JavaScript
 
 # Getting Started with Create React App
 
