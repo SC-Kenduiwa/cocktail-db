@@ -47,7 +47,8 @@ function ListCocktails() {
               <h2 className="h2-letter">{letter}</h2>
               <ul className="un-ordered">
                 {drinks.map(cocktail => (
-                  <li key={cocktail.idDrink} className="list">{cocktail.strDrink}</li>
+                  <li key={cocktail.idDrink} className="list">{cocktail.strDrink}
+                  <img src={cocktail.strDrinkThumb} alt={cocktail.strDrink}/></li>
                 ))}
               </ul>
             </div>
