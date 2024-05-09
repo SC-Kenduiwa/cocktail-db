@@ -45,7 +45,7 @@ const SearchByName = () => {
           onChange={handleInputChange}
           style={{ marginRight: "10px" }}
         />
-        <button type="submit">Search</button>
+        <button type="submit" style={{ fontFamily: "Times New Roman", fontSize: "16px", padding: "8px 16px", backgroundColor: "#f0f0f0", border: "1px solid #ccc", borderRadius: "4px", cursor: "pointer" }}>Search</button>
       </form>
       <h2 style={{ fontFamily: "Times New Roman", fontSize: "25px", marginTop: "20px", marginBottom: "10px" }}>Search Results</h2>
       <div className="cocktail-list" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
@@ -65,3 +65,4 @@ const SearchByName = () => {
 };
 
 export default SearchByName;
+g
